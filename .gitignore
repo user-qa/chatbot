@@ -1,0 +1,159 @@
+# General
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+
+# Build files
+/build/
+/dist/
+/out/
+
+# Dependency directories
+/node_modules/
+/bower_components/
+/jspm_packages/
+/vendor/
+/venv/
+/pipenv/
+/poetry/
+
+# Package files
+*.lock
+package-lock.json
+yarn.lock
+
+# Compiled files
+*.o
+*.out
+*.obj
+
+# Executables
+*.exe
+*.com
+*.dll
+*.class
+*.jar
+
+# Libraries
+*.lib
+*.so
+*.dylib
+
+# Logs and databases
+*.db
+*.sql
+*.sqlite
+
+# Images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+
+# Documentation
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+
+# Cache files
+.cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.*.prod
+
+# Backup files
+*~
+*.bak
+
+# Ignore custom backups
+backup*/
+
+# Ignore Visual Studio files
+*.sln
+*.vcxproj
+*.vcproj
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.tlog
+*.zip
+*.opendb
+*.log
+*.lastbuildstate
+[Bb]in/
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+
+# Ignore Xcode files
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcworkspace
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+# Ignore JetBrains files
+.idea/
+*.iml
+*.ipr
+*.iws
+*.ideaworkspace
+
+# Ignore Sublime Text files
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Eclipse files
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# Ignore NetBeans files
+nbproject/private/
+build/
+
+# Ignore MATLAB files
+*.asv
+*.mex*
+*.mat
+*_mex.m
+*.fig
+*.mlx
