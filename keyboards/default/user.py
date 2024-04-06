@@ -3,8 +3,8 @@ from aiogram.types.reply_keyboard import ReplyKeyboardMarkup, KeyboardButton
 user_on_start = ReplyKeyboardMarkup(
     [
         [
-            KeyboardButton("Shaxsiy Ma'lumotlar"),
-            KeyboardButton("Foydalanuvchi qidirish")
+            KeyboardButton("Personal Information"),
+            KeyboardButton("Search Users")
         ]
     ], resize_keyboard=True
 )
@@ -13,12 +13,12 @@ user_on_start = ReplyKeyboardMarkup(
 user_personal_info = ReplyKeyboardMarkup(
     [
         [
-            KeyboardButton("usernameni o'zgartirish"),
-            KeyboardButton("ismni o'zgartirish"),
-            KeyboardButton("Ma'lumotlarni olish")
+            KeyboardButton("Change Username"),
+            KeyboardButton("Change Full Name"),
+            KeyboardButton("Get Personal Information")
         ],
         [
-            KeyboardButton("Orqaga")
+            KeyboardButton("Go Back")
         ]
 
     ], resize_keyboard=True

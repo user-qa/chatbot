@@ -4,7 +4,7 @@ from states.user import SearchState
 from aiogram.dispatcher.storage import FSMContext
 from keyboards.default.user import user_on_start
 
-@dp.message_handler(text = "Foydalanuvchi qidirish")
+@dp.message_handler(text = "Search Users")
 async def on_find_user(message: types.Message):
     text = 'Please, enter the username of the person you wanna search!'
     await message.answer(text = text)
@@ -21,11 +21,11 @@ async def get_target_username(message:types.Message, state: FSMContext ):
             text = f"Name: {person[2]}\n Username: {person[3]}"
             await message.answer(text)
     else:
-        await message.answer(text="Ma'lumot topilmadi")
+        await message.answer(text="Data not found😕")
     await state.finish()
 
 
-@dp.message_handler(text = "Orqaga")
+@dp.message_handler(text = "Go Back")
 async def on_find_user(message: types.Message):
     text = 'Went Back!'
     await message.answer(text = text, reply_markup=user_on_start)

@@ -4,13 +4,13 @@ from aiogram.dispatcher.storage import FSMContext
 from states.user import ChangesState
 from keyboards.default.user import user_personal_info
 
-@dp.message_handler(text = "Shaxsiy Ma'lumotlar")
+@dp.message_handler(text = "Personal Information")
 async def on_change_username(message: types.Message):
-    await message.answer(text = 'Personal Data Section', reply_markup=user_personal_info)
+    await message.answer(text = 'Personal Information Section', reply_markup=user_personal_info)
 
-@dp.message_handler(text = ["usernameni o'zgartirish"])
+@dp.message_handler(text = ["Change Username"])
 async def on_change_username(message: types.Message):
-    text = "Yangi username kiriting! "
+    text = "Enter a new username!"
     await message.answer(text)
 
     await ChangesState.change_user.set()
@@ -19,7 +19,7 @@ async def on_change_username(message: types.Message):
 async def change_username(message: types.Message, state: FSMContext):
     username = message.text
     if db.get_user_by_username(username.lower()):
-        text = f'{username} allaqachon band qilingan'
+        text = f'{username} has already been take'
         await message.answer(text)
         await ChangesState.change_user.set()
     else:
@@ -31,9 +31,9 @@ async def change_username(message: types.Message, state: FSMContext):
 
 
 
-@dp.message_handler(text = ["ismni o'zgartirish"])
+@dp.message_handler(text = ["Change Full Name"])
 async def on_change_username(message: types.Message):
-    text = "Yangi ism kiriting! "
+    text = "Enter your full name! "
     await message.answer(text)
 
     await ChangesState.change_name.set()
@@ -51,10 +51,10 @@ async def change_name(message: types.Message, state: FSMContext):
 
 
 
-@dp.message_handler(text=["Ma'lumotlarni olish"])
+@dp.message_handler(text=["Get Personal Information"])
 async def on_change_username(message: types.Message):
     current_user = db.get_user_by_chat_id(chat_id=message.chat.id)
-    text = f""" Ismingiz:        {current_user[0][2]}
-Usernamingiz:    {current_user[0][3]}
+    text = f""" Your full name:     {current_user[0][2]}
+Your username:    {current_user[0][3]}
             """
     await message.answer(text = text)
