@@ -18,7 +18,7 @@ async def get_target_username(message:types.Message, state: FSMContext ):
     target_full_data = db.get_user_by_username(target_data_inputted)
     if target_full_data:
         for person in target_full_data:
-            text = f"Name: {person[2]}\n Username: {person[3]}"
+            text = f"Name: {person[2]}\nUsername: {person[3]}"
             await message.answer(text)
     else:
         await message.answer(text="Data not found😕")

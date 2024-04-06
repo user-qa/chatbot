@@ -65,7 +65,7 @@ class DATABASE:
 
     def update_name(self, data: dict):
         chat_id = data['chat_id']
-        full_name = data['name']
+        full_name = data['full_name']
         query = f"update users_table set full_name = '{full_name}' where chat_id = '{chat_id}'"
         self.cursor.execute(query)
         self.conn.commit()
